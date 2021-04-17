@@ -8,21 +8,21 @@ Created on Thu Apr 15 12:09:56 2021
 
 
 from flask import Flask, render_template,request,redirect,url_for,flash
-import code_generator
-from flask_mail import Message,Mail
+from mailjet_rest import Client
 
-data = code_generator.generate()
+
+api_key = '63588ea5f6af7e6be84944a685f80152'
+api_secret = 'e23d5310dde40c1a934aff632c469057'
+mailjet = Client(auth=(api_key, api_secret), version='v3.1')
+
+
+
+#data = code_generator.generate()
 
 app = Flask(__name__)
 app.config['SECRET_KEY']='Website'
-app.config['MAIL_SERVER']='smtp.gmail.com'
-app.config['MAIL_PORT']=465
-app.config['MAIL_USERNAME']=data[0]
-app.config['MAIL_PASSWORD']=data[1]
-app.config['MAIL_USE_TLS']=False
-app.config['MAIL_USE_SSL']=True
 
-mail = Mail(app)
+
 
 @app.route('/')
 def home():
@@ -49,10 +49,28 @@ def contact():
         name = request.form['name']
         email = request.form['email']
         msg = request.form['msg']
-        subject="Mail from website"
-        info = Message(subject,sender = "ana.customer1000@gmail.com",recipients = ['ashm.jagadeesh@gmail.com'])
-        info.body = "Name : " + str(name) + "\nEmail : " + str(email) + '\n'+str(msg)
-        mail.send(info)
+        data = {
+                  'Messages': [
+                    {
+                      "From": {
+                        "Email": "ashm.jagadeesh@gmail.com",
+                        "Name": name
+                      },
+                      "To": [
+                        {
+                          "Email": "ashm.jagadeesh@gmail.com",
+                          "Name": "Ashish M J"
+                        }
+                      ],
+                      "Subject": "Mail From Website",
+                      "TextPart": "Name - "+name+"\nEmail - "+email+"\n"+msg,
+                      "CustomID": "AppGettingStartedTest"
+                    }
+                  ]
+                }
+        
+        result = mailjet.send.create(data=data)
+        print(result.status_code)
         print("Mail Sent")
         flash("Email Successfully sent. ")
         return redirect(url_for('contact'))

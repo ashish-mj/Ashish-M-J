@@ -1,11 +1,10 @@
 blinker==1.4
 certifi==2020.12.5
 click
-Flask-Mail==0.9.1
 Flask
 gunicorn==20.1.0
 itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-
+mailjet_rest
