@@ -15,10 +15,12 @@ h3{
     margin-left: 5%;
     border: 1px solid #FFEE00;
     padding-top: 5px;
+    padding-right: 5px;
     height: 65vh;
 }
 .plan-box div{
     padding: 15px;
+    
 }
 .plan-box .border{
     border-bottom: 1px solid #FFEE00;
@@ -29,7 +31,7 @@ h3{
 
 .skills p{
     display: inline;
-    padding-left: 25px;
+    padding-left: 15px;
     padding-bottom: 10px;
     color:white;
 }
