@@ -1,18 +1,159 @@
-section{
-    height: 90vh;
+*{
+    box-sizing: border-box;
 }
+
+html,body{
+    position: fixed;
+    background-color: #000;
+    color: #FFEE00;
+    font-family: 'Lato', 'Arial' ,sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix{zoom:1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.row{
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo{
+    position: fixed;
+    height: 90px;
+    width: 90px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+
+.main-nav{
+    margin-left: 280px;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 20px;
+   }
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #FFEE00;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    padding: 8px 0;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #FFEE00;
+    transition: .1s;
+}
+
+.main-header{
+    position: fixed;
+    top:0;
+    right: 0;
+    float: right;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+/********************footer***********/
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    padding: 5px;
+    font-size: 80%;
+}
+
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+.social-links li a:link,
+.social-links li a:visited,
+.footer-nav li a:link,
+.footer-nav li a:visited{
+    text-decoration: none;
+    color: white;
+    border: 0;
+    transition: color 0.2s;
+    }
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color:  #FFEE00;
+}
+
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size: 160%
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+
 .photo{
-    width: 75%;
-    height: 75%;
-    padding-top: 35px;
-    padding-bottom: 85px;
+    width: 30%;
+    height: 70%;
+    position: fixed;
+    top: 150px;
+    left: 75px;
+    padding-bottom: 185px;
     border-radius: 50%;
 }
 
 .text-box{
-    padding-top: 150px;
+    position: fixed;
+    top: 250px;
+    left: 625px;
 }
 
 .rakuten{
     color: #ff0000;
 }
+
