@@ -79,6 +79,7 @@ header{
 /********************footer***********/
 
 footer{
+    margin-top: 10px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -139,11 +140,10 @@ footer{
 
 .photo{
     width: 30%;
-    height: 70%;
+    height: 60%;
     position: fixed;
-    top: 150px;
+    top: 130px;
     left: 75px;
-    padding-bottom: 185px;
     border-radius: 50%;
 }
 

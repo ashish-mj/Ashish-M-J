@@ -1,0 +1,60 @@
+@media only screen and (max-width:480px){
+
+    html,body{
+        font-size: 15px;
+    }
+    .logo{
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+    }
+    .main-nav{
+        margin-left: 10px;
+    }
+    .main-nav li{
+        margin-left: 15px;
+        margin-top: 5px;
+       }
+
+       .main-nav li a:link,
+       .main-nav li a:visited{
+           font-size: 60%;
+           padding: 4px 0;
+       }
+
+       .main-header{
+        margin-right: 0px;
+        margin-top: 35px;
+    }
+
+    .main-header a img{
+        width: 50%;
+        height: 50%;
+
+    }
+
+    .photo{
+        top: 100px;
+        left: 20px;
+        width: 40%;
+        height: 40%;
+    }
+
+    .text-box{
+        top: 175px;
+        left: 175px;
+        font-size: 100%;
+    }
+
+    footer{
+        margin-top: 5px;
+        padding: 2.5px;
+        font-size: 50%;
+    }
+
+    .social-links li a img{
+        width: 50%;
+        height: 50%;
+    }
+
+}
