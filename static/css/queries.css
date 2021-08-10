@@ -1,3 +1,7 @@
+@media only screen and (max-width:572px){
+
+}
+
 @media only screen and (max-width:480px){
 
     html,body{
@@ -34,15 +38,15 @@
     }
 
     .photo{
-        top: 100px;
-        left: 20px;
+        top: 20%;
+        left: 5%;
         width: 40%;
         height: 40%;
     }
 
     .text-box{
-        top: 175px;
-        left: 175px;
+        top: 30%;
+        left: 50%;
         font-size: 100%;
     }
 
@@ -56,5 +60,5 @@
         width: 50%;
         height: 50%;
     }
-
 }
+
