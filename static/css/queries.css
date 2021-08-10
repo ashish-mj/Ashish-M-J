@@ -15,10 +15,10 @@
         margin-left: 4%;
     }
     .main-nav{
-        margin-left: 5%;
+        margin-left: 1%;
     }
     .main-nav li{
-        margin-left: 5%;
+        margin-left: 4%;
         margin-top: 2%;
        }
 
@@ -47,7 +47,7 @@
 
     .text-box{
         top: 40%;
-        left: 40%;
+        left: 30%;
         font-size: 100%;
     }
 
@@ -62,4 +62,3 @@
         height: 40%;
     }
 }
-*/
