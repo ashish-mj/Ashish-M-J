@@ -10,7 +10,6 @@ html,body{
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    height: 90vh;
 }
 
 .clearfix{zoom:1}
@@ -35,23 +34,25 @@ header{
 
 .logo{
     position: fixed;
-    height: 90px;
-    width: 90px;
+    height: 15%;
+    width: 7.5%;
     float: left;
-    margin-top: 10px;
-    margin-left: 30px;
+    margin-top: 0.5%;
+    margin-left: 7.5%;
     border-radius: 50%;
 }
 
 .main-nav{
-    margin-left: 280px;
+    position: fixed;
+    width: 100%;
+    margin-left: 25%;
 }
 
 .main-nav li{
     display: inline-block;
     list-style: none;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 2%;
+    margin-right: 2%;
    }
 
 .main-nav li a:link,
@@ -60,7 +61,6 @@ header{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    padding: 8px 0;
 }
 .main-nav li a:hover,
 .main-nav li a:active{
@@ -73,20 +73,20 @@ header{
     top:0;
     right: 0;
     float: right;
-    margin-right: 40px;
-    margin-top: 40px;
+    margin-right: 1%;
+    margin-top: 3%;
 }
 
 /********************footer***********/
 
 footer{
-    margin-top: 10px;
+    margin-top: 0.25%;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: #333;
-    padding: 5px;
+    padding: 0.1%;
     font-size: 80%;
 }
 
@@ -143,15 +143,15 @@ footer{
     width: 30%;
     height: 60%;
     position: fixed;
-    top: 130px;
-    left: 75px;
+    top: 20%;
+    left: 10%;
     border-radius: 50%;
 }
 
 .text-box{
     position: fixed;
-    top: 250px;
-    left: 625px;
+    top: 35%;
+    left: 50%;
 }
 
 .rakuten{
