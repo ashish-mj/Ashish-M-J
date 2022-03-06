@@ -731,6 +731,14 @@ a:hover {
 .hero-single .breadcrumb a {
   color: #fff;
 }
+.container li{
+  list-style : none;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+
 
 /*--------------------------------------------------------------
 # About
@@ -1294,4 +1302,10 @@ footer .credits {
 }
 footer .credits a {
   color: #fff;
+}
+.credits li{
+  list-style : none;
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 20px;
 }
