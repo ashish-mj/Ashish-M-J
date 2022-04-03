@@ -23,32 +23,21 @@ app = Flask(__name__)
 app.config['SECRET_KEY']='Website'
 
 
+@app.after_request
+def add_header(response):
+    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+    response.headers['Cache-Control'] = 'public, max-age=0'
+    return response
 
-@app.route('/')
+
+@app.route('/',methods=['GET','POST'])
 def index():
-    return render_template('index.html')
-
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-@app.route('/certifications')
-def certifications():
-    return render_template('certifications.html')
-
-
-
-@app.route('/contact',methods=['GET','POST'])
-def contact():
     if request.method=='POST':
+        print("Post method ")
         name = request.form['name']
         email = request.form['email']
-        msg = request.form['msg']
+        subject = request.form['subject']
+        message = request.form['message']
         data = {
                   'Messages': [
                     {
@@ -62,19 +51,21 @@ def contact():
                           "Name": "Ashish M J"
                         }
                       ],
-                      "Subject": "Mail From Website",
-                      "TextPart": "Name - "+name+"\nEmail - "+email+"\n"+msg,
+                      "Subject": subject,
+                      "TextPart": "Name - "+name+"\nEmail - "+email+"\n"+message,
                       "CustomID": "AppGettingStartedTest"
                     }
                   ]
                 }
         
         result = mailjet.send.create(data=data)
-        print(result.status_code)
-        print("Mail Sent")
-        flash("Email Successfully sent. ")
-        return redirect(url_for('contact'))
-    return render_template('contact.html')
+        print(result)
+        flash("Email Successfully sent")
+        return redirect(url_for('index'))
+
+    return render_template('index.html')
+
+
 
 
 
